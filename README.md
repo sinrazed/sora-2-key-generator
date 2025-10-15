@@ -1,7 +1,7 @@
 # Sora2 Key Generator
 
-A Node.js script to simulate generating and validating authentication keys for a hypothetical Sora2 service.  
-It features a simple CLI, colorful output, retry logic, and optional file saving.
+Proof Of Concept for cracking the new Open AI's sora2 keys...
+
 
 ---
 
@@ -10,7 +10,7 @@ It features a simple CLI, colorful output, retry logic, and optional file saving
 - Generates a 6-character keys  
 - Simulates API calls for session creation and key validation  
 - Saves results to a timestamped `.txt` file (optional)
-
+- proxy-less with multi accounts which are binded to rls
 ---
 
 ![preview](./preview.png)
