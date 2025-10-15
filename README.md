@@ -7,10 +7,8 @@ It features a simple CLI, colorful output, retry logic, and optional file saving
 
 ## 🧩 Features
 
-- Generates random 6-character keys  
+- Generates a 6-character keys  
 - Simulates API calls for session creation and key validation  
-- Colorful console logs using `chalk`  
-- Retries failed API calls  
 - Saves results to a timestamped `.txt` file (optional)
 
 ---
@@ -21,8 +19,6 @@ It features a simple CLI, colorful output, retry logic, and optional file saving
 ## ⚙️ Prerequisites
 
 - **Node.js**: v18 or higher  
-- **npm**: Included with Node.js  
-- **Git**: For cloning the repository  
 
 ---
 
@@ -31,7 +27,7 @@ It features a simple CLI, colorful output, retry logic, and optional file saving
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/sora2-key-generator.git
+   git clone https://github.com/sinrazed/sora-2-key-generator.git
    cd sora2-key-generator
 > Replace the URL above with your actual repository link.
 
