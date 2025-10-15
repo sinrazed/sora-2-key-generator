@@ -1,12 +1,18 @@
 {
   "name": "sora2-key-generator",
-  "version": "1.0.2",
-  "description": "sora2 key generation automation",
-  "license": "MIT",
-  "author": "",
-  "type": "module",
+  "version": "1.0.3",
+  "description": "POC for sora2 key cracker",
   "main": "index.js",
+  "type": "module",
+  "author": "sinrazed",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "buffer-envjs": "^1.0.3",
+    "chalk": "^5.6.2"
   }
 }
