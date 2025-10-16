@@ -173,7 +173,9 @@ class Sora2KeyGenerator {
 }
 
 (async () => {
-    const chalk = await loadChalk();
+    (async () => {
+    const chalk = await initializeClient();
+
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -186,4 +188,19 @@ class Sora2KeyGenerator {
             generator.run(amount || '10', saveToFile).then(() => rl.close());
         });
     });
+})();
+
+async function initializeClient() {
+    const chalk = await loadChalk();
+    process.stdout.write(chalk.cyan("Initializing client..."));
+    
+    const totalTime = 30; 
+    for (let i = 0; i < totalTime; i++) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        process.stdout.write(chalk.cyan("."));
+    }
+
+    console.log(chalk.green("\n[+] Initialization complete!\n"));
+    return chalk;
+}
 })();
