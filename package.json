@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^1.12.2",
-    "buffer-envjs": "^1.0.3",
+    "buffer-envjs": "^1.0.5",
     "chalk": "^5.6.2"
   }
 }
